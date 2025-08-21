@@ -15,7 +15,7 @@
 /// To run this example:
 ///     $ cd example
 ///     $ dart deprecated_remover.dart
-library dart_codemod.example.deprecated_remover;
+library;
 
 import 'dart:io';
 
@@ -44,7 +44,7 @@ class DeprecatedRemover extends GeneralizingAstVisitor<void>
 void main(List<String> args) async {
   exitCode = await runInteractiveCodemod(
     filePathsFromGlob(Glob('deprecated_remover_fixtures/**.dart')),
-    DeprecatedRemover(),
+    DeprecatedRemover().call,
     args: args,
   );
 }

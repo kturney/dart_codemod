@@ -15,7 +15,7 @@
 /// To run this example:
 ///     $ cd example
 ///     $ dart license_header_inserter.dart
-library dart_codemod.example.license_header_inserter;
+library;
 
 import 'dart:io';
 

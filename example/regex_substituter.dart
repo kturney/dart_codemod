@@ -15,7 +15,7 @@
 /// To run this example:
 ///     $ cd example
 ///     $ dart regex_substituter.dart
-library dart_codemod.example.regex_substituter;
+library;
 
 import 'dart:io';
 
@@ -35,7 +35,7 @@ Stream<Patch> regexSubstituter(FileContext context) async* {
   for (final match in pattern.allMatches(context.sourceText)) {
     final line = match.group(0)!;
     final constraint = match.group(1)!;
-    final updated = line.replaceFirst(constraint, targetConstraint) + '\n';
+    final updated = '${line.replaceFirst(constraint, targetConstraint)}\n';
 
     yield Patch(updated, match.start, match.end);
   }

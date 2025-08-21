@@ -87,6 +87,6 @@ class FileContext {
           '${location.lineNumber}:${location.columnNumber}');
     }
     throw ArgumentError(
-        'File "${relativePath}" produced diagnostics when parsed:\n$buffer');
+        'File "$relativePath" produced diagnostics when parsed:\n$buffer');
   }
 }
